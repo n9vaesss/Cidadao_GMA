@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Consulta - Cidadão</title>
+    <link rel="stylesheet" href="/style/style_main.css">
+
+</head>
+<body>
+    <main>
+
+        <img src="img/logoprincipal.png" alt="Logo Principal" class = "logo">
+
+        <div class = "titulo">
+            <h1>Sistema de Consulta - Cidadão</h1>
+        </div>
+
+        <section class = "secprincipal"> <!--QUADRADO QUE ALINHA TUDO NO MEIO-->
+
+            <div> <!--QUADRADO QUE DEIXA TUDO NO MEIO DO QUADRADO PRINCIPAL-->
+
+                <div> <!--A DIV QUE SEPARA O NOME-->
+
+                    <p class = "nome">Nome:</p> <!--NOME-->
+                    <div><input type="text" name="txtnome" id="txtnome" autocomplete="off" class = "btnsombra"></div> <!--ESPAÇO PARA COLOCAR O NOME-->
+
+                </div>
+
+                <div class = "botao"> <!--DIV QUE SEPARA DATA SEXO / PARA SEPARAR E ALINHAS AS INPUTS-->
+
+                    <div class = bnasc> <!--DIV QUE SEPARA DATA DE SEXO-->
+
+                        Data de Nascimento:
+                        <div class = bdata>
+                            <input type="date" name="txtdata" id="txtdata" style="font-size: 20px;" class = "btnsombra">
+                        </div> <!--ESPAÇO PARA COLOCAR DATA DE NASCIMENTO-->
+                        
+                    </div>
+            
+                    <div> <!--DIV QUE SEPARA SEXO DE DATA-->
+                        <p class = "psexo" >Sexo:</p>
+            
+                            <div class = "sexo"> <!--DIV COM AS OPÇOES DE MASCULINO, FEMININO E AMBOS-->
+                                <input type="radio" name="redsex" id="ambos" checked>
+                                <label for="ambos">Ambos</label>
+                                <input type="radio" name="redsex" id="masc">
+                                <label for="masc">Masculino</label>
+                                <input type="radio" name="redsex" id="fem">
+                                <label for="fem" class="fem">Feminino</label>
+                            </div>
+            
+                    </div>
+
+                </div>
+            
+                    <div class = "botao"> <!--DIV QUE SEPARA DATA SEXO / PARA SEPARAR E ALINHAS AS INPUTS-->
+
+                        <div class = "brg"> <!--SPARA O RG DOS DEMAIS-->
+
+                            RG:
+                            <div>
+                                <input type="text" name="txtrg" id="txtrg" placeholder="__.___.___-_" maxlength="10" autocomplete="off" class = botao1 >
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            CPF:
+                            <div> <!--DIV QUE SEPARA CPF DOS DEMAIS-->
+
+                                <input type="text" name="txtcpf" id="txtcpf" placeholder="___.___.___-__"
+                                autocomplete="off" maxlength="11" class = botao1>
+
+                            </div>
+            
+                        </div>
+
+                        <div> <!--DIV QUE SEPARA CADASTRO CIDADÃO DOS DEMAIS-->
+
+                            Cadastro Cidadão:
+                            <div class = "cad">
+                                <input type="text" name="txtcidadao" id="txtcidadao" autocomplete="off" class = botao1>
+                            </div>
+
+                        </div>
+
+                    </div>
+            
+                <h1 class = "Tmoradia">Moradia:</h1> <!--H1 DE TITULO MORADIA-->
+
+                <div class = "moradia"> <!--DIV QUE FAZ TODA BARRA DE MORADIA-->
+
+                    <div class ="botao2"> <!--DIV DENTRO DA BARRA DE MORADIA-->
+
+                        <div class = "barra"> <!--DIV QUE SEPARA E ESTILIZA AS BARRAS-->
+
+                            <label for="bairro">Bairro:</label>
+                            <select name="selbarrio" id="selbair">
+                            <option value="0">Todos</option>
+                            </select>
+                        </div>
+
+                        <div class = "barra"> <!--DIV QUE SEPARA E ESTILIZA AS BARRAS-->
+
+                            <label for="log">Logradouro:</label>
+                            <select name="sellog" id="sellog">
+                            <option value="0">Todos</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class = "limpesq"> <!--DIV QUE FAZ A BARRA QUE TEM O LIMPAR Q PESQUISAR-->
+
+                    <div class = "limp"> <!--DIV QUE SEPARA O BOTAO DE LIMPAR-->
+
+                        <input type="button" value="🔄 Limpar Filtos" onclick="btnlimp()">
+
+                    </div>
+
+                    <div class = "pesq">
+
+                        <input type="button" value="🔍 Pesquisar" onclick="btnpesq()"> <!--DIV QUE SEPARA O BOTAO DE LIMPAR-->
+            
+                    </div>
+                </div>
+
+                <div id ="divresul"> <!--DIV QUE CRIA A EXTENÇÃO DA PAGINA-->
+
+                </div>
+
+            </div>
+        
+        </section>
+        
+    </main>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
